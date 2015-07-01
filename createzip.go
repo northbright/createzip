@@ -57,7 +57,7 @@ func (zf *ZipFile) Add(fileNameInZip string, r io.Reader) (err error) {
 //
 //   Params:
 //       srcFilePath: original file path.
-//       fileNameInZip: file name(path) in the zip. If it's empty(""), the file name will be "." + file name without dir of original source file.
+//       fileNameInZip: file name(path) in the zip. If it's empty(""), the file name will be root dir of the zip("./") + file name without dir of original source file.
 func (zf *ZipFile) AddFile(srcFilePath, fileNameInZip string) (err error) {
 	fi, err := os.Open(srcFilePath)
 	if err != nil {
