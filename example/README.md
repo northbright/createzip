@@ -1,10 +1,6 @@
-# createzip
+# Example to Create Downloadable Zip for HTTP Server
 
-Package createzip is a helper to create local zip or downloadable zip for HTTP server then add files into the zip file.
-
-#### Example to Create the Zip for HTTP Server  
-
-You may find the [example](./example/main.go) in [./example/main.go](./example/main.go)
+#### Example to Create the Zip for HTTP Server
 
     func hello(w http.ResponseWriter, r *http.Request) {
         // Create zip file for HTTP server
@@ -16,13 +12,7 @@ You may find the [example](./example/main.go) in [./example/main.go](./example/m
         zf.Close()
     }
 
+
 #### Run Example
 
 `sudo ./example`
-
-
-#### Documentation
-* [API Reference](http://godoc.org/github.com/northbright/createzip)
-
-#### License
-* [MIT License](./LICENSE)
