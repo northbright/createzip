@@ -75,6 +75,7 @@ func (zf *ZipFile) AddFile(srcFilePath, fileNameInZip string) (err error) {
 		}
 		return err
 	}
+	defer fi.Close()
 
 	// If file name in zip is "", use the file name without dir.
 	if fileNameInZip == "" {

@@ -36,7 +36,7 @@ func main() {
 	mux["/"] = hello
 
 	server := http.Server{
-		Addr:    ":80",
+		Addr:    ":8080",
 		Handler: &MyHandler{},
 	}
 
