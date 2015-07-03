@@ -18,7 +18,7 @@ You may find the [example](./example/main.go) in [./example/main.go](./example/m
 
 #### Run Example
 
-`sudo ./example`
+`./example`
 
 
 #### Documentation
