@@ -2,6 +2,8 @@
 
 createzip is a [Golang](http://golang.org) package which creates local zip or downloadable zip for HTTP server then add files into the zip file.
 
+[![Build Status](https://travis-ci.org/northbright/createzip.svg?branch=master)](https://travis-ci.org/northbright/createzip)
+
 #### Example to Create the Zip for HTTP Server  
 
 You may find the [example](./example/main.go) in [./example/main.go](./example/main.go)
