@@ -1,6 +1,6 @@
 # createzip
 
-Package createzip is a helper to create local zip or downloadable zip for HTTP server then add files into the zip file.
+createzip is a [Golang](http://golang.org) package which creates local zip or downloadable zip for HTTP server then add files into the zip file.
 
 #### Example to Create the Zip for HTTP Server  
 
