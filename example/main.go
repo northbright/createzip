@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/northbright/createzip"
 	"io"
 	"net/http"
+
+	"github.com/northbright/createzip"
 )
 
 type MyHandler struct{}
