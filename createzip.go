@@ -17,7 +17,9 @@ type ZipFile struct {
 }
 
 var (
-	DEBUG bool = false // Set to true to enable debug messages from this package.
+	// DEBUG is debug mode.
+	// Set to true to enable debug messages from this package.
+	DEBUG bool = false
 )
 
 // New creates a new zip file. It should call Close() after use.
