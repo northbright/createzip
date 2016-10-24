@@ -20,12 +20,12 @@ var (
 	DEBUG bool = false // Set to true to enable debug messages from this package.
 )
 
-// New() creates a new zip file. It should call Close() after use.
+// New creates a new zip file. It should call Close() after use.
 func New(w io.Writer) (zf *ZipFile) {
 	return &ZipFile{zip.NewWriter(w)}
 }
 
-// NewForHTTP() creates the downloadable zip for HTTP server dynamically.
+// NewForHTTP creates the downloadable zip for HTTP server dynamically.
 func NewForHTTP(w http.ResponseWriter, zipFileName string) (zf *ZipFile) {
 	w.Header().Set("Content-Type", "application/zip")
 	w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=\"%s\"", zipFileName))
@@ -33,12 +33,12 @@ func NewForHTTP(w http.ResponseWriter, zipFileName string) (zf *ZipFile) {
 	return New(w)
 }
 
-// Close() closes the writer of zip. It should call Close() after use.
+// Close closes the writer of zip. It should call Close() after use.
 func (zf *ZipFile) Close() {
 	zf.w.Close()
 }
 
-// Add() creates a new file in the zip and copy the content from io.Reader.
+// Add creates a new file in the zip and copy the content from io.Reader.
 //
 //   Params:
 //       fileNameInZip: file name(path) in the zip.
@@ -62,7 +62,7 @@ func (zf *ZipFile) Add(fileNameInZip string, r io.Reader) (err error) {
 	return nil
 }
 
-// AddFile() creates a new file in the zip and copy the content from the original source file.
+// AddFile creates a new file in the zip and copy the content from the original source file.
 //
 //   Params:
 //       srcFilePath: original file path.
