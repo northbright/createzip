@@ -8,7 +8,7 @@ import (
 	"github.com/northbright/createzip"
 )
 
-type MyHandler struct{}
+type myHandler struct{}
 
 var (
 	mux = make(map[string]func(http.ResponseWriter, *http.Request))
@@ -24,7 +24,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 	zf.Close()
 }
 
-func (*MyHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (*myHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	url := r.URL.String()
 	if h, ok := mux[url]; ok {
 		h(w, r)
@@ -38,7 +38,7 @@ func main() {
 
 	server := http.Server{
 		Addr:    ":8080",
-		Handler: &MyHandler{},
+		Handler: &myHandler{},
 	}
 
 	err := server.ListenAndServe()
